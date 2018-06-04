@@ -16,7 +16,7 @@ public class ConnecteurBD {
 
 
 	/************* Fonction pour les requêtes sql préparées **************/
-	public static PreparedStatement getPs(String query,int id) {
+	public static PreparedStatement getPs(String query) {
 		PreparedStatement retour=null;
 
 		try {
