@@ -22,7 +22,7 @@ public class AdmissionSessionLinkManager {
 		PreparedStatement ps=ConnecteurBD.getPs(queryAfficherChoixSessionEtudiant);
 
 		try {
-			for (int i=0;i<sessions.length;i++) {
+			for (int i=0;i<=sessions.length;i++) {
 				ps.setString(1, sessions[i]);
 				ResultSet result=ps.executeQuery();
 

@@ -23,7 +23,7 @@ public class AdmissionProgrammeLinkManager {
 		PreparedStatement ps=ConnecteurBD.getPs(queryAfficherChoixProgrammeEtudiant);
 
 		try {
-			for (int i=0;i<programmes.length;i++) {
+			for (int i=0;i<=programmes.length;i++) {
 				ps.setString(1, programmes[i]);
 				ResultSet result=ps.executeQuery();
 
@@ -44,7 +44,7 @@ public class AdmissionProgrammeLinkManager {
 			/****** Pour ajouter les id recuperes dans la table admission_programme_link *******/
 			PreparedStatement pstatement=ConnecteurBD.getPs(queryAjouterChoixProgramme);
 
-			for (int i = 0; i < liste.size(); i++) {
+			for (int i = 0; i <liste.size(); i++) {
 				pstatement.setInt(1, liste.get(i).getId());
 				pstatement.setInt(2,DossierEtudiantManager.id_etudiant);
 
